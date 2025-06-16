@@ -1,103 +1,169 @@
-​<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HSG AI IMAGE - مولد الصور بالذكاء الاصطناعي</title>
-  <link rel="icon" href="https://i.postimg.cc/d3823YW9/1000069461.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
-    <!-- أيقونة الموقع -->
+  <meta name="description" content="منصة HSG AI IMAGE لتوليد الصور بالذكاء الاصطناعي - حوّل أفكارك إلى لوحات فنية رقمية بضغطة زر">
+  <meta name="keywords" content="AI, توليد الصور, ذكاء اصطناعي, HSG, Stable Diffusion, صور فنية">
+  <title>HSG AI IMAGE - مولد الصور بالذكاء الاصطناعي المتطور</title>
+  
+  <!-- Favicon and Styles -->
   <link rel="icon" href="https://i.postimg.cc/d3823YW9/1000069461.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "HSG AI IMAGE",
+    "description": "منصة توليد الصور بالذكاء الاصطناعي المتطورة",
+    "url": "https://yourwebsite.com",
+    "applicationCategory": "ArtApplication",
+    "operatingSystem": "Web"
+  }
+  </script>
 </head>
+
 <body>
   <div class="container">
-    <header class="app-header">
+    <!-- Header Section -->
+    <header class="app-header" role="banner">
       <div class="logo-container">
-        <img src="https://i.postimg.cc/d3823YW9/1000069461.png" alt="HSG AI IMAGE Logo" class="logo">
-        <h1>HSG AI IMAGE</h1>
-      </div>
-      <p class="subtitle">منصة توليد الصور بالذكاء الاصطناعي المتطورة</p>
-    </header>
-
-    <div class="input-section">
-      <textarea id="promptInput" placeholder="صف ما تريد أن تراه... (مثال: منظر لغروب الشمس على شاطئ رملي)"></textarea>
-      
-      <div class="input-options">
-        <select id="modelSelect" class="model-select">
-          <option value="default">النموذج الافتراضي</option>
-          <option value="stable-diffusion">Stable Diffusion</option>
-          <option value="openjourney">OpenJourney</option>
-          <option value="protogen">Protogen</option>
-          <option value="sd-xl">Stable Diffusion XL</option>
-        </select>
-        
-        <div class="prompt-actions">
-          <button id="randomPromptBtn" class="secondary">
-            <i class="fas fa-lightbulb"></i> فكرة عشوائية
-          </button>
-          <button id="generateBtn" class="primary">
-            <i class="fas fa-magic"></i> توليد الصورة
-          </button>
+        <img src="https://i.postimg.cc/d3823YW9/1000069461.png" alt="شعار HSG AI IMAGE" class="logo" width="80" height="80">
+        <div class="title-container">
+          <h1>HSG AI IMAGE</h1>
+          <p class="subtitle">منصة الذكاء الاصطناعي لتوليد الصور الفريدة</p>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div id="imageContainer" class="image-container">
-      <div class="placeholder">
-        <i class="fas fa-image"></i>
-        <p>سوف تظهر الصورة المولدة هنا</p>
-      </div>
-    </div>
+    <!-- Main Content -->
+    <main role="main">
+      <!-- Input Section -->
+      <section class="input-section" aria-labelledby="inputSectionTitle">
+        <h2 id="inputSectionTitle" class="sr-only">إدخال وصف الصورة</h2>
+        
+        <div class="prompt-wrapper">
+          <label for="promptInput" class="sr-only">وصف الصورة</label>
+          <textarea id="promptInput" placeholder="صف ما تريد أن تراه بالتفصيل... (مثال: منظر لغروب الشمس على شاطئ رملي مع أمواج زرقاء صافية وأشجار نخيل)" 
+                    aria-label="اكتب وصف الصورة هنا"></textarea>
+          
+          <div class="generation-options">
+            <div class="model-selection">
+              <label for="modelSelect">نموذج التوليد:</label>
+              <select id="modelSelect" class="model-select" aria-label="اختر نموذج توليد الصور">
+                <option value="default">النموذج الافتراضي</option>
+                <option value="stable-diffusion">Stable Diffusion</option>
+                <option value="openjourney">OpenJourney</option>
+                <option value="protogen">Protogen</option>
+                <option value="sd-xl">Stable Diffusion XL</option>
+              </select>
+            </div>
+            
+            <div class="action-buttons">
+              <button id="randomPromptBtn" class="secondary" aria-label="توليد وصف عشوائي">
+                <i class="fas fa-random" aria-hidden="true"></i> فكرة عشوائية
+              </button>
+              <button id="generateBtn" class="primary" aria-label="توليد الصورة">
+                <i class="fas fa-magic" aria-hidden="true"></i> توليد الصورة
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="actions" id="actions" style="display: none;">
-      <div class="action-group">
-        <button onclick="removeBackground()" class="action-btn">
-          <i class="fas fa-cut"></i> إزالة الخلفية
-        </button>
-        <button onclick="enhanceQuality()" class="action-btn">
-          <i class="fas fa-star"></i> تحسين الجودة
-        </button>
-        <button onclick="applyArtisticFilter()" class="action-btn">
-          <i class="fas fa-paint-brush"></i> تأثير فني
-        </button>
-      </div>
-      <div class="action-group">
-        <button onclick="downloadImage()" class="action-btn download">
-          <i class="fas fa-download"></i> تحميل الصورة
-        </button>
-        <button onclick="removeImage()" class="action-btn danger">
-          <i class="fas fa-trash"></i> إزالة الصورة
-        </button>
-      </div>
-    </div>
+      <!-- Image Display Section -->
+      <section class="image-section" aria-labelledby="imageSectionTitle">
+        <h2 id="imageSectionTitle" class="sr-only">عرض الصورة المولدة</h2>
+        
+        <div id="imageContainer" class="image-container">
+          <div class="placeholder">
+            <i class="fas fa-image" aria-hidden="true"></i>
+            <p>سوف تظهر الصورة المولدة هنا</p>
+          </div>
+        </div>
+      </section>
 
-    <div class="features">
-      <div class="feature-card">
-        <i class="fas fa-bolt"></i>
-        <h3>سرعة فائقة</h3>
-        <p>توليد الصور خلال ثوانٍ معدودة</p>
+      <!-- Image Actions -->
+      <section class="image-actions" id="actions" style="display: none;" aria-labelledby="actionsTitle">
+        <h2 id="actionsTitle" class="sr-only">أدوات تحرير الصورة</h2>
+        
+        <div class="action-groups">
+          <div class="action-group" role="group" aria-label="أدوات تحسين الصورة">
+            <button onclick="removeBackground()" class="action-btn" aria-label="إزالة خلفية الصورة">
+              <i class="fas fa-cut" aria-hidden="true"></i> إزالة الخلفية
+            </button>
+            <button onclick="enhanceQuality()" class="action-btn" aria-label="تحسين جودة الصورة">
+              <i class="fas fa-star" aria-hidden="true"></i> تحسين الجودة
+            </button>
+            <button onclick="applyArtisticFilter()" class="action-btn" aria-label="تطبيق تأثير فني">
+              <i class="fas fa-paint-brush" aria-hidden="true"></i> تأثير فني
+            </button>
+          </div>
+          
+          <div class="action-group" role="group" aria-label="أدوات إدارة الصورة">
+            <button onclick="downloadImage()" class="action-btn download" aria-label="تحميل الصورة">
+              <i class="fas fa-download" aria-hidden="true"></i> تحميل
+            </button>
+            <button onclick="removeImage()" class="action-btn danger" aria-label="إزالة الصورة">
+              <i class="fas fa-trash" aria-hidden="true"></i> إزالة
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Features Section -->
+    <section class="features-section" aria-labelledby="featuresTitle">
+      <h2 id="featuresTitle" class="section-title">مميزات منصتنا</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card" role="article">
+          <div class="feature-icon">
+            <i class="fas fa-bolt" aria-hidden="true"></i>
+          </div>
+          <h3>سرعة فائقة</h3>
+          <p>توليد الصور خلال ثوانٍ معدودة باستخدام أحدث تقنيات الذكاء الاصطناعي</p>
+        </div>
+        
+        <div class="feature-card" role="article">
+          <div class="feature-icon">
+            <i class="fas fa-expand" aria-hidden="true"></i>
+          </div>
+          <h3>جودة عالية</h3>
+          <p>صور بدقة 4K مع تفاصيل دقيقة وألوان زاهية</p>
+        </div>
+        
+        <div class="feature-card" role="article">
+          <div class="feature-icon">
+            <i class="fas fa-sliders-h" aria-hidden="true"></i>
+          </div>
+          <h3>تحكم كامل</h3>
+          <p>خيارات متقدمة للتحكم في نمط وجودة الصورة المولدة</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <i class="fas fa-expand"></i>
-        <h3>جودة HD</h3>
-        <p>صور بدقة عالية ووضوح ممتاز</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-sliders-h"></i>
-        <h3>خيارات متعددة</h3>
-        <p>اختر بين نماذج توليد مختلفة</p>
-      </div>
-    </div>
+    </section>
   </div>
 
-  <footer class="app-footer">
-    <p>© <span id="currentYear"></span> HSG AI IMAGE - جميع الحقوق محفوظة</p>
+  <!-- Footer -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-content">
+      <p>© <span id="currentYear"></span> HSG AI IMAGE - جميع الحقوق محفوظة</p>
+      <div class="social-links">
+        <a href="#" aria-label="تابعنا على تويتر"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="زورنا على فيسبوك"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="تواصل معنا على إنستغرام"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  
+  <!-- Hidden elements for screen readers -->
+  <div class="sr-only" aria-live="polite" id="loadingStatus"></div>
+  <div class="sr-only" aria-live="assertive" id="errorStatus"></div>
 </body>
 </html>
