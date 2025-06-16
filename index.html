@@ -1,0 +1,103 @@
+​<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSG AI IMAGE - مولد الصور بالذكاء الاصطناعي</title>
+  <link rel="icon" href="https://i.postimg.cc/d3823YW9/1000069461.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+    <!-- أيقونة الموقع -->
+  <link rel="icon" href="https://i.postimg.cc/d3823YW9/1000069461.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="logo-container">
+        <img src="https://i.postimg.cc/d3823YW9/1000069461.png" alt="HSG AI IMAGE Logo" class="logo">
+        <h1>HSG AI IMAGE</h1>
+      </div>
+      <p class="subtitle">منصة توليد الصور بالذكاء الاصطناعي المتطورة</p>
+    </header>
+
+    <div class="input-section">
+      <textarea id="promptInput" placeholder="صف ما تريد أن تراه... (مثال: منظر لغروب الشمس على شاطئ رملي)"></textarea>
+      
+      <div class="input-options">
+        <select id="modelSelect" class="model-select">
+          <option value="default">النموذج الافتراضي</option>
+          <option value="stable-diffusion">Stable Diffusion</option>
+          <option value="openjourney">OpenJourney</option>
+          <option value="protogen">Protogen</option>
+          <option value="sd-xl">Stable Diffusion XL</option>
+        </select>
+        
+        <div class="prompt-actions">
+          <button id="randomPromptBtn" class="secondary">
+            <i class="fas fa-lightbulb"></i> فكرة عشوائية
+          </button>
+          <button id="generateBtn" class="primary">
+            <i class="fas fa-magic"></i> توليد الصورة
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="imageContainer" class="image-container">
+      <div class="placeholder">
+        <i class="fas fa-image"></i>
+        <p>سوف تظهر الصورة المولدة هنا</p>
+      </div>
+    </div>
+
+    <div class="actions" id="actions" style="display: none;">
+      <div class="action-group">
+        <button onclick="removeBackground()" class="action-btn">
+          <i class="fas fa-cut"></i> إزالة الخلفية
+        </button>
+        <button onclick="enhanceQuality()" class="action-btn">
+          <i class="fas fa-star"></i> تحسين الجودة
+        </button>
+        <button onclick="applyArtisticFilter()" class="action-btn">
+          <i class="fas fa-paint-brush"></i> تأثير فني
+        </button>
+      </div>
+      <div class="action-group">
+        <button onclick="downloadImage()" class="action-btn download">
+          <i class="fas fa-download"></i> تحميل الصورة
+        </button>
+        <button onclick="removeImage()" class="action-btn danger">
+          <i class="fas fa-trash"></i> إزالة الصورة
+        </button>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-bolt"></i>
+        <h3>سرعة فائقة</h3>
+        <p>توليد الصور خلال ثوانٍ معدودة</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-expand"></i>
+        <h3>جودة HD</h3>
+        <p>صور بدقة عالية ووضوح ممتاز</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-sliders-h"></i>
+        <h3>خيارات متعددة</h3>
+        <p>اختر بين نماذج توليد مختلفة</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>© <span id="currentYear"></span> HSG AI IMAGE - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
