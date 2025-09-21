@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>HSG AI Scene Generator | AI-Powered Cinematic Visuals</title>
+    <meta name="description" content="Generate stunning, cinematic scenes from your characters. Upload images, describe your scene, and let HSG AI bring your vision to life with advanced AI image generation powered by Nano Banana.">
+    <meta name="keywords" content="AI scene generator, cinematic AI, character to image, AI storyboard, film pre-visualization, Nano Banana AI, Gemini API, HSG AI, منشئ المشاهد بالذكاء الاصطناعي, سينمائي, تحويل الشخصية إلى صورة">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HSG AI Scene Generator | AI-Powered Cinematic Visuals">
+    <meta property="og:description" content="Instantly create cinematic scenes with your characters using advanced AI. Upload images, define styles, and generate high-resolution visuals for your projects.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?grayscale&blur=2">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="HSG AI Scene Generator | AI-Powered Cinematic Visuals">
+    <meta property="twitter:description" content="Instantly create cinematic scenes with your characters using advanced AI. Upload images, define styles, and generate high-resolution visuals for your projects.">
+    <meta property="twitter:image" content="https://picsum.photos/1200/630?grayscale&blur=2">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Exo 2', 'sans-serif'],
+              'arabic': ['Tajawal', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'pulse-glow': 'pulseGlow 2s infinite ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(52, 211, 153, 0.4)' },
+                '50%': { boxShadow: '0 0 35px rgba(52, 211, 153, 0.8)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

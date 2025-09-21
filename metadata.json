@@ -1,0 +1,5 @@
+{
+  "name": "HSG AI Scene Generator",
+  "description": "An advanced AI-powered tool to generate cinematic scenes from character images, descriptions, and stylistic references. Create stunning visuals with precise control over camera, lighting, and lens, powered by Google's Gemini API.",
+  "requestFramePermissions": []
+}

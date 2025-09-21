@@ -1,64 +1,20 @@
 <div align="center">
-  <img src="https://i.postimg.cc/d3823YW9/1000069461.png" alt="HSG AI IMAGE Logo" width="150">
-  
-  # 🚀 HSG AI IMAGE
-  
-  **منصة توليد الصور بالذكاء الاصطناعي المتطورة**  
-  *حول أفكارك إلى لوحات فنية رقمية بضغطة زر*
-  
-  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/hsg-ai-image/blob/main/LICENSE)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/hsg-ai-image/pulls)
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
----
+# Run and deploy your AI Studio app
 
-## ✨ المميزات الرائعة
+This contains everything you need to run your app locally.
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/art-prices.png" width="80">
-        <h4>توليد صور فريدة</h4>
-        <p>أنشئ صوراً لا مثيل لها بناءً على وصفك النصي</p>
-      </td>
-      <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/high-quality.png" width="80">
-        <h4>جودة عالية الدقة</h4>
-        <p>صور بدقة 4K بلمسات فنية احترافية</p>
-      </td>
-      <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/maintenance.png" width="80">
-        <h4>أدوات تحسين متقدمة</h4>
-        <p>تحسين الجودة، إزالة الخلفية وتأثيرات فنية</p>
-      </td>
-    </tr>
-  </table>
-</div>
+View your app in AI Studio: https://ai.studio/apps/drive/1ZMOPHk-wZOsw7ZakjHoaOyUv-uznnUM1
 
----
+## Run Locally
 
-## 🛠️ التقنيات المستخدمة
+**Prerequisites:**  Node.js
 
-<div align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img src="https://img.shields.io/badge/Pollinations.AI-000000?style=for-the-badge">
-</div>
 
----
-
-## 🖼️ معرض الصور
-
-<div align="center">
-  <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=صورة+1" width="30%">
-  <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=صورة+2" width="30%">
-  <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=صورة+3" width="30%">
-</div>
-
----
-
-## ⚡ كيفية الاستخدام
-
-1. **اكتب وصفاً للصورة** في مربع النص
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
